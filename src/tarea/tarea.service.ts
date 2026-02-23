@@ -129,7 +129,7 @@ export class TareaService {
         WHERE com.tarea_comentada_id = t.id
       ) AS comentarios
     FROM tarea t
-    WHERE t.user_creador_id = $1 OR t.user_asignado_id = $1
+    WHERE t.user_asignado_id = $1
     ORDER BY t.created_at DESC;
     `;
 
